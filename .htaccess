@@ -1,0 +1,10 @@
+# Tutorial here https://medium.com/shecodeafrica/building-your-own-custom-php-framework-part-1-1d24223bab18
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# R makes a redirect and L forbids to apply any rules below this one. If there are no L then the rest rules will be applied to the new URL.
+# $1 is the first captured group from your regular expression; that is, the contents between ( and )
+RewriteRule ^(.+)$ index.php/$1 [R=301, L]
+
