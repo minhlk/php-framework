@@ -10,7 +10,7 @@ class IndexController {
 
     public function index()
     {
-        return "Index Method";
+        Init::view('index');
     }
 
     public function login()
